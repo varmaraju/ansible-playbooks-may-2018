@@ -1,0 +1,8 @@
+---
+ - hosts: all
+   gather_facts: no
+   become: yes
+   connection: ssh
+   tasks:
+    - debug: msg="{{ lookup('env','HOME') }} is the value listed"
+

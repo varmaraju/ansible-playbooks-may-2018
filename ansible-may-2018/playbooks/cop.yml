@@ -1,0 +1,8 @@
+---
+ - hosts: all
+   tasks:
+    - name: copy the filrs from one locatio0n to another location
+      copy:
+        src: /home/one.txt
+        dest: /tmp/one.txt
+

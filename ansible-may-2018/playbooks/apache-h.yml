@@ -1,0 +1,10 @@
+---
+ - hosts: all
+   tasks:
+     - name: install the apache package
+       apt:
+         name: apache2
+         state: present
+   handlers:
+   - name: start apache2
+     service: name=apache2 state=started

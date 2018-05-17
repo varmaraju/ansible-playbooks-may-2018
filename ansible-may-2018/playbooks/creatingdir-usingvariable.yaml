@@ -1,0 +1,8 @@
+---
+ - hosts: webserver
+   tasks: 
+    - name: creating multiple directories
+      file:
+        path: "{{ dir_path }}"
+        state: directory
+      

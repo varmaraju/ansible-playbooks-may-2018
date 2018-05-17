@@ -1,0 +1,9 @@
+---
+ - hosts: webserver
+   serial: "50%"
+   tasks:
+    - name: create the directory in linux
+      file:
+        path: /opt/lm
+        state: directory
+    

@@ -1,0 +1,11 @@
+---
+ - hosts: all
+   tasks:
+     - name: install the apache package
+       apt:
+         name: apache2
+         state: present
+       register: apacheoutput
+     - debug: var=apacheoutput
+
+   

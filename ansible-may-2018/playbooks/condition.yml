@@ -1,0 +1,11 @@
+---
+ - hosts: all
+   tasks:
+     - name: installing the packages in multiple os
+       apt:
+         name: apache2
+         state: present
+       when: ansible_os_family == "Debian"
+
+          
+         

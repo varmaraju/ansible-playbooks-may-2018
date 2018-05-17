@@ -1,0 +1,8 @@
+---
+ - hosts: all
+   tasks: 
+    - name: creating softlink between two files
+      file:
+        src: /opt/jk.log
+        dest: /tmp/seshi.log
+        state: link

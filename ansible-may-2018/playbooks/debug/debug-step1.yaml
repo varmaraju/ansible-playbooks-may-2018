@@ -1,0 +1,7 @@
+---
+ - hosts: webserver
+   connection: ssh
+   tasks:
+     - name: print the date and time of server
+       raw: /bin/date
+       

@@ -1,0 +1,9 @@
+---
+ - hosts: all
+   gather_facts: no
+   tasks:
+    - name: create the directory in linux
+      file:
+        path: /opt/lm
+        state: directory
+    

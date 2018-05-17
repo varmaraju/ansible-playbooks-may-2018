@@ -1,0 +1,6 @@
+---
+ - hosts: all
+   tasks:
+    - name: which command test for all nodes
+      command: apt-get install tree
+

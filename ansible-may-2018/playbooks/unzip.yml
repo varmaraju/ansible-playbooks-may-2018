@@ -1,0 +1,7 @@
+---
+ - hosts: all
+   tasks:
+    - name: unzip the files
+      unarchive:
+        src: /tmp/jdk-8u151-linux-x64.tar.gz
+        dest: /opt/

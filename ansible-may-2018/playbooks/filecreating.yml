@@ -1,0 +1,8 @@
+---
+ - hosts: all
+   tasks:
+    - name: create the directory in linux
+      file:
+        path: /opt/klll
+        state: file
+    

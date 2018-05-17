@@ -1,0 +1,9 @@
+---
+ - hosts: webserver
+   connection: ssh
+   tasks:
+     - name: running up commnd using raw module and log backup that
+       raw: /usr/bin/uptime >> /tmp/uplog
+       run_once: true
+    
+

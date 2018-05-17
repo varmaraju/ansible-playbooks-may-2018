@@ -1,0 +1,10 @@
+---
+ - hosts: all
+   tasks:
+     - name: creating multiple directorys
+       file:
+          path: /web/{{ item.path }}
+          state: directory
+          mode: '{{ item.mode }}'
+       with_filetree: web/
+       when: item.state == 'directory' 

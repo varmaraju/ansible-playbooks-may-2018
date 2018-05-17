@@ -1,0 +1,10 @@
+---
+# tasks file for dir
+ - name: create the directory in linux
+   file:
+     path: "{{ mahesh_dir }}"
+     state: directory
+ - name: Dynamically copy the file using template
+   template:
+     src: test.j2
+     dest: /tmp/testdyamic

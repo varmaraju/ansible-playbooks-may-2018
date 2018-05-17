@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Installing the "{{ item }}"
+      apt: 
+        name: "{{ item }}" 
+        state: installed
+      with_items:
+        -  tree
+        -  wget

@@ -1,0 +1,10 @@
+---
+ - hosts: all
+   tasks:
+     - name: Install multiple packages
+       apt: name={{item}} state=present
+       with_items:
+         - apache2
+         - tree
+         - vim
+         
